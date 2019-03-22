@@ -1,0 +1,60 @@
+body {
+	background-image: url(../images/bj01.jpg);
+	background-size: cover;
+}
+
+.headdd {
+	margin-top: 10px;
+	height: 50px;
+	color: #ADADAD;
+	float: left
+}
+
+h2 {
+	font-family: cursive;
+	color: #0000FF;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.carousel_map {
+	margin-top: 100px;
+	/*margin-left: 60px;*/
+}
+
+.carousel {
+	width: 720px;
+	height: 366px;
+}
+
+.login {
+	background-color: white;
+	margin-top: 100px;
+	height: 400px;
+}
+
+/*登录按钮*/
+.btn{
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    background-color: #22B3C8;
+    margin-top: 10px;
+}
+.btn:hover{
+    background-color:#008c93;
+}
+
+/*忘记密码*/
+.resetPwd {
+	float: right;
+	margin-right: 10px;
+	color: #22B3C8;
+}
+resetPwd:hover{
+    color: #008c93;
+    text-decoration: underline;
+}
