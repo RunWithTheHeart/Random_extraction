@@ -1,5 +1,6 @@
 package com.wyy.service;
 
+import com.wyy.bean.Admin;
 import com.wyy.bean.User;
 import com.wyy.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,4 +19,6 @@ public interface IUserService {
 
     //查询用户
     public User selectUser(User user);
+    //查询用户
+    public Admin selectAdmin(Admin admin);
 }

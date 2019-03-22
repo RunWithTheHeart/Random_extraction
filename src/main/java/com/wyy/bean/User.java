@@ -4,6 +4,7 @@ public class User {
     public Integer id;
     public String username;
     public String password;
+    public int type;
 
 
     public User() {
@@ -39,6 +40,13 @@ public class User {
         this.password = password;
     }
 
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     @Override
     public String toString() {
@@ -46,6 +54,7 @@ public class User {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", type=" + type +
                 '}';
     }
 }

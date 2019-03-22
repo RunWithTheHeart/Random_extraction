@@ -1,5 +1,6 @@
 package com.wyy.controller;
 
+import com.wyy.bean.Admin;
 import com.wyy.bean.User;
 import com.wyy.service.IUserService;
 import com.wyy.service.impl.UserServiceImpl;
@@ -29,6 +30,10 @@ public class LoginController extends BaseController{
 
     @Autowired
     private UserServiceImpl userServiceImpl;
+
+    //返回的查询结果
+    Admin admin2;
+    User user2;
     /**
      * 跳转到登录页面
      * @return
@@ -44,27 +49,40 @@ public class LoginController extends BaseController{
     /**
      * 用户登录
      * @param httpSession
-     * @param username
-     * @param password
-     * @return
+     * @return  String username, String password,
      */
+
     @RequestMapping("/userLogin")
-    public String userLogin(HttpSession httpSession, String username, String password, Model model) {
+    public String userLogin(HttpSession httpSession, User user, Model model) {
 
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(password);
+        System.out.println(user);
+        //1.管理员  2.普通用户
+        if(user.getType() == 1){
+            Admin admin = new Admin();
+            admin.setUsername(user.getUsername());
+            admin.setPassword(user.getPassword());
+            admin2 = userServiceImpl.selectAdmin(admin);
+        }else{
+           user2= userServiceImpl.selectUser(user);
+        }
 
-        if (!((userServiceImpl.selectUser(user))== null)) {
-            //登陆成功
+
+        if (user.getType() == 1 && admin2 != null) {
+            //管理员登陆成功
             System.out.println("登录成功");
-            httpSession.setAttribute("username", username);
-//          httpSession.removeAttribute("errmsg");
+            httpSession.setAttribute("username", user.username);
+            httpSession.removeAttribute("errmsg");
+            return "index";
+        }if(user.getType() == 2 && user2 != null){
+            //普通用户登陆成功
+            System.out.println("登录成功");
+            httpSession.setAttribute("username", user.username);
+            httpSession.removeAttribute("errmsg");
             return "index";
         } else {
             //登陆失败
             System.out.println("登陆失败");
-            model.addAttribute("errmsg","登录失败，请重新登录！");
+            model.addAttribute("errmsg","用户名或密码错误！");
 
             return "login?errmsg=-1";
 
