@@ -32,8 +32,8 @@ public class LoginController extends BaseController{
     private UserServiceImpl userServiceImpl;
 
     //返回的查询结果
-    Admin admin2;
-    User user2;
+    Admin admin2 = null;
+    User user2= null;
     /**
      * 跳转到登录页面
      * @return
@@ -62,6 +62,7 @@ public class LoginController extends BaseController{
             admin.setUsername(user.getUsername());
             admin.setPassword(user.getPassword());
             admin2 = userServiceImpl.selectAdmin(admin);
+            //System.out.println(admin2);
         }else{
            user2= userServiceImpl.selectUser(user);
         }
