@@ -39,6 +39,17 @@
       <version>${spring.version}</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>3.2.6.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>3.2.6.RELEASE</version>
+    </dependency>
+
     <!--Spring 单元测试 Spring-test -->
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
     <dependency>
@@ -164,6 +175,13 @@
       <groupId>org.xhtmlrenderer</groupId>
       <artifactId>flying-saucer-pdf-itext5</artifactId>
       <version>9.0.7</version>
+    </dependency>
+
+    <!--mail  jar包 -->
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4.7</version>
     </dependency>
 
   </dependencies>

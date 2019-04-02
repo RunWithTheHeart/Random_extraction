@@ -53,6 +53,9 @@
             <mvc:exclude-mapping path="/userLogin"/>
             <mvc:exclude-mapping path="/userLogout"/>
             <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/sendCode"/>
+            <mvc:exclude-mapping path="/checkCode"/>
+            <mvc:exclude-mapping path="/resetPassword"/>
             <!--<mvc:exclude-mapping path="/test"/>-->
             <!--静态资源不拦截-->
             <mvc:exclude-mapping path="/static/**"/>
