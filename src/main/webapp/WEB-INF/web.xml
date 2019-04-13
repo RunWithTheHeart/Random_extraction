@@ -5,6 +5,7 @@
          version="3.1">
     <!--web.xml节点加载顺序：节点的加载顺序与它们在 web.xml 文件中的先后顺序无关。
     加载顺序为：context-param -> listener -> filter -> servlet-->
+    <display-name>Random_extraction</display-name>
 
     <!--1、启动 Spring 的 IOC 容器-->
     <!-- needed for ContextLoaderListener -->
@@ -112,4 +113,8 @@
         <error-code>404</error-code><!--通过错误码来配置error-page，还可通过异常类型配置，如<exception-type>java.lang.NullException</exception-type>-->
         <location>/WEB-INF/error/404.jsp</location>
     </error-page>
+
+    <welcome-file-list>
+        <welcome-file>/views/login.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>

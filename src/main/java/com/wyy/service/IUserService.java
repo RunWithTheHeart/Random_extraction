@@ -21,4 +21,10 @@ public interface IUserService {
     public User selectUser(User user);
     //查询用户
     public Admin selectAdmin(Admin admin);
+
+    //根据email查询用户名
+    public String selectUsername(String email,int type);
+    //根据email重置密码
+    public int updatePwd(String email,String password,int type);
+
 }

@@ -17,15 +17,16 @@
 
 <div class="login col-md-4" id="reset-step1">
 	<h4 align="center"><b>重置密码</b></h4><hr />
-	<form action="resetPassword" method="post">
+	<form action="resetPwd" method="post">
 		<div class="input-group">
 			<span class="input-group-addon" id="sizing-addon"><span class="glyphicon glyphicon-envelope"></span></span>
 			<input type="text" id="email" name="email" class="form-control" placeholder="请输入邮箱"  aria-describedby="sizing-addon">
 		</div>
-		<!--<span>邮箱格式错误</span>-->
+        <!-- 显示验证码错误信息-->
+        <span id="checkEmail" style="color: red"></span>
 		<br /><br />
 		<div class="input-group">
-			<div > <%--style="float: left;"--%>
+			<div>
 				<input type="text" id="code" name="code" class="form-control" placeholder="请输入邮箱验证码" style="width:50%;"/>
 				&emsp;
 				<input id="sendCode" type="button" onclick="sendvCode(this)" value="点击发送验证码" style="height: 34px"></input>
@@ -46,14 +47,18 @@
 
 		<div>
 			<input class="btn" type="button" onclick="show2()" value="下一步"> onclick="return checkCode();"<br />
-			<a class="resetPwd" href="login.jsp" >返回登录</a>
+			<a class="resetPwd" href="login" >返回登录</a>
 		</div>
-	</form>
+	<%--</form>--%>
 </div>
 
 <div class="login col-md-4"id="reset-step2" style="visibility: hidden">
 	<h4 align="center"><b>重置密码</b></h4><hr />
-	<form action="resetPassword" method="post">
+	<%--<form action="resetPassword" method="post">--%>
+		<%--<div>
+			<input type="hidden" name="email" value="${email}"/>
+			<input type="hidden" name="type" value="{type}"/>
+		</div>--%>
 		<div class="input-group">
 			<span class="input-group-addon" id="sizing-addon2"><span class=" glyphicon glyphicon-lock"></span></span>
 			<input type="password" id="password" name="password" class="form-control" placeholder="请输入新密码" aria-describedby="sizing-addon2" onblur="checkPwd()">
@@ -67,8 +72,9 @@
 		<span id="errMsg2">以字母开头，长度在6~18之间，只能包含字母、数字和下划线</span>
 		<br /><br />
 		<div>
-			<input class="btn" type="submit" onclick="return validate();"  value="完成"><br />
-			<a class="resetPwd" href="login.jsp" >返回登录</a>
+			<input class="btn" type="button" onclick="return validate()"  value="完成"><br />
+			<a class="resetPwd" href="login" >返回登录</a>
+
 		</div>
 	</form>
 </div>
@@ -87,17 +93,25 @@
     //请求发送验证码
     function sendvCode(thisBtn)
     {
+
         /*判断邮箱格式是否正确*/
         if (jemail()==false){
             return false;
 		}
-        /*判断邮箱是否存在，请求发送验证码*/
+
+        checkEmail();
+        /*判断邮箱是否存在*/
+		/*if(checkEmail() == false){
+            return false;
+        }*/
+
+        /*请求发送验证码*/
         $.ajax({
             type: "POST",
             url: "/sendCode",
             data: {email:$("#email").val(),type:$("input[name='type']:checked").val()},
             success: function(msg){
-                alert( "Data Saved: " + msg );
+               /* alert( "Data Saved: " + msg );*/
             }
         });
         /*计时*/
@@ -139,23 +153,26 @@
 			/*$("#email").focus();*/
 		}
 	}
-	//}
-    //判断密码是否格式正确
-    function jpwd(){
-        if($("#password").val()=="")
-        {
-            alert("邮箱不能为空");
-            return false;
-        }
-        var email=$("#email").val();
-        if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/))
-        {
-            alert("格式不正确！请重新输入");
-            return false;
-            /*$("#email").focus();*/
-        }
-    }
 
+    /*判断邮箱是否存在*/
+    function checkEmail(){
+        $.ajax({
+            url:'/checkEmail',
+            data: {email:$("#email").val(),type:$("input[name='type']:checked").val()},
+            type:'post',
+            dataType:'text',
+            success:function(data){
+                if(data=='false'){
+                    document.getElementById("checkEmail").innerHTML="邮箱不存在";
+                  /* alert("邮箱不存在");*/
+                    return false;
+                }else{
+                    document.getElementById("checkEmail").innerHTML="";
+                }
+            }
+
+        })
+    }
     /*判断邮箱验证码是否正确*/
     function checkCode(){
 		$.ajax({
@@ -165,7 +182,7 @@
 			dataType:'text',
 			success:function(data){
 				if(data=='true'){
-
+                    document.getElementById("checkmsg").innerHTML="";
                     show2();
 					return true;
 				}else{
@@ -176,6 +193,30 @@
 
 		})
 	}
+    /*判断密码是否重置成功*/
+    function resetPwd(){
+        $.ajax({
+            url:'/resetPwd',
+            data:{email:$("#email").val(),type:$("input[name='type']:checked").val(),password:$("#password").val()},
+            type:'post',
+            dataType:'text',
+            success:function(data){
+                if(data=='true'){
+                   alert("密码重置成功！点击确认返回登录");
+                   window.location.href="/login";//需要跳转的地址
+                }else{
+                    alert("密码重置失败！请重新操作");
+                    window.location.href="/a";//需要跳转的地址
+                }
+            },
+			error:function (data) {
+				alert("密码重置失败！请重新操作");
+                window.location.href="/a";//需要跳转的地址
+            }
+
+        })
+    }
+
 	/*判断密码是否符合要求*/
     function checkPwd(){
         var pwd = $("#password").val();
@@ -188,6 +229,7 @@
         }
 
     }
+
     function checkPwd2(){
         var pwd2 = $("#password2").val();
 		if(pwd2.match(/^[a-zA-Z]\w{5,17}$/)){
@@ -205,12 +247,15 @@
         var pwd2 = $("#password2").val();
         <!-- 对比两次输入的密码 -->
         if(pwd == pwd2) {
+            resetPwd();
            return true;
         } else {
             $("#errMsg2").html("两次密码不相同");
             return false;
         }
+
     }
+
 </script>
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>

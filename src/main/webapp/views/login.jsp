@@ -73,7 +73,7 @@
                   
 				<div>
 					<input class="btn" type="submit" onclick="return check();"  value="登录"><br />
-					<a class="resetPwd" href="../views/resetPassword.jsp" >忘记密码？</a>
+					<a class="resetPwd" href="a" >忘记密码？</a>
 				</div>
     		</form>
     	</div>

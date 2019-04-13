@@ -16,6 +16,9 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private AdminMapper adminMapper;
 
+    public UserServiceImpl() {
+    }
+
     /**
      * 普通用户
      * @param user
@@ -34,5 +37,21 @@ public class UserServiceImpl implements IUserService {
     @Override
     public Admin selectAdmin(Admin admin) {
         return adminMapper.selectByAll(admin);
+    }
+
+    @Override
+    public String selectUsername(String email,int type) {
+        if(type ==1){
+            return adminMapper.selectByEmail(email);
+        }
+        return userMapper.selectByEmail(email);
+    }
+
+    @Override
+    public int updatePwd(String email, String password,int type) {
+        if(type==1){
+            return adminMapper.resetPwd(email,password);
+        }
+        return userMapper.resetPwd(email,password);
     }
 }

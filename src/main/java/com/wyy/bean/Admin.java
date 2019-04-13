@@ -4,16 +4,26 @@ public class Admin {
     public Integer id;
     public String username;
     public String password;
+    public String email;
     public int type;
 
 
     public Admin() {
     }
 
-    public Admin(Integer id, String username, String password) {
+    public Admin(Integer id, String username, String password,String email) {
         this.id = id;
         this.username = username;
         this.password = password;
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Integer getId() {
@@ -54,6 +64,7 @@ public class Admin {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
                 ", type=" + type +
                 '}';
     }

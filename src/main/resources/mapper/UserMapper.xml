@@ -6,6 +6,7 @@
         <id column="id" jdbcType="INTEGER" property="id" />
         <result column="username" jdbcType="VARCHAR" property="username" />
         <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
     </resultMap>
 
 
@@ -20,5 +21,17 @@
         from  user
         where username = #{username,jdbcType=VARCHAR} and password = #{password,jdbcType=VARCHAR}
     </select>
+    <!--根据email查询用户名-->
+    <select id="selectByEmail" parameterType="String" resultType="String">
+        select username
+        from  user
+        where email = #{email,jdbcType=VARCHAR}
+    </select>
 
+    <!--根据email重置密码-->
+    <update id="resetPwd">
+        update user
+        set  password = #{password,jdbcType=VARCHAR}
+        where email =  #{email,jdbcType=VARCHAR}
+    </update>
 </mapper>
