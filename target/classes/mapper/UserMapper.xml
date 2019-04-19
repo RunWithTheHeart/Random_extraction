@@ -34,4 +34,26 @@
         set  password = #{password,jdbcType=VARCHAR}
         where email =  #{email,jdbcType=VARCHAR}
     </update>
+
+    <!--修改密码-->
+    <update id="changePwd">
+        update user
+        set  password = #{password,jdbcType=VARCHAR}
+        where username =  #{username,jdbcType=VARCHAR}
+    </update>
+
+    <!--查询所有-->
+    <select id="selectAllUser" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select *
+        from  user
+        limit #{start},#{length}
+    </select>
+
+    <!--查询数据条数-->
+    <select id="count" resultType="java.lang.Integer">
+        select count(*)
+        from  user
+    </select>
+
+
 </mapper>

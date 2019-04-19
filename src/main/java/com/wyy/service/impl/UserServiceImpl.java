@@ -1,15 +1,18 @@
 package com.wyy.service.impl;
 
 import com.wyy.bean.Admin;
+import com.wyy.bean.PageInfo;
 import com.wyy.bean.User;
 import com.wyy.dao.AdminMapper;
 import com.wyy.dao.UserMapper;
-import com.wyy.service.IUserService;
+import com.wyy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
@@ -27,6 +30,27 @@ public class UserServiceImpl implements IUserService {
     @Override
     public User selectUser(User user) {
         return userMapper.selectByAll(user);
+    }
+
+    /**
+     * 查询所有用户
+     * @return
+     */
+    @Override
+    public PageInfo<User> selectAllUser(int start,int length,int draw) {
+        int count = userMapper.count();
+
+        Map<String, Object> params = new HashMap<>();
+        params.put("start",start);
+        params.put("length",length);
+
+        PageInfo<User> pageInfo = new PageInfo<>();
+        pageInfo.setDraw(draw);
+        pageInfo.setRecordsTotal(count);
+        pageInfo.setRecordsFiltered(count);
+        pageInfo.setData(userMapper.selectAllUser(params));
+
+        return pageInfo;
     }
 
     /**
@@ -54,4 +78,21 @@ public class UserServiceImpl implements IUserService {
         }
         return userMapper.resetPwd(email,password);
     }
+
+    /**
+     * 修改密码
+     * @param username
+     * @param password
+     * @param type
+     * @return
+     */
+    @Override
+    public int changePwd(String username, String password, int type) {
+        if(type==1){
+            return adminMapper.changePwd(username,password);
+        }
+        return userMapper.changePwd(username,password);
+    }
+
+
 }

@@ -34,4 +34,10 @@
         set  password = #{password,jdbcType=VARCHAR}
         where email =  #{email,jdbcType=VARCHAR}
     </update>
+    <!--修改密码-->
+    <update id="changePwd">
+        update admin
+        set  password = #{password,jdbcType=VARCHAR}
+        where username =  #{username,jdbcType=VARCHAR}
+    </update>
 </mapper>

@@ -172,4 +172,32 @@ public class ResetPwdController extends BaseController {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 修改密码
+     * @param request
+     * @param response
+     */
+    @RequestMapping("/change_password")
+    public void changePwd(HttpServletRequest request, HttpServletResponse response) {
+        String username = request.getParameter("username");
+        String pwd = request.getParameter("password");
+        int type = Integer.parseInt(request.getParameter("type"));
+        try {
+            response.setContentType("text/html;charset=utf-8");
+            PrintWriter out = response.getWriter();
+            if (userServiceImpl.changePwd(username,pwd,type) == 1) {
+                //重置密码成功
+                out.append("true");
+                System.out.println("密码更改成功,请返回登录");
+            } else {
+                out.append("false");
+                System.out.println("密码更改失败,请重新操作");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

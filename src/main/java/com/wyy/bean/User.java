@@ -1,11 +1,13 @@
 package com.wyy.bean;
 
-public class User {
-    public Integer id;
-    public String username;
-    public String password;
-    public String email;
-    public int type;
+import java.io.Serializable;
+
+public class User  implements Serializable {
+    private Integer id;
+    private String username;
+    private String password;
+    private String email;
+    private int type;
 
 
     public User() {

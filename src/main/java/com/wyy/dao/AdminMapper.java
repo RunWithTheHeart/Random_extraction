@@ -12,4 +12,6 @@ public interface AdminMapper {
     String selectByEmail(String email);
     //重置密码
     int resetPwd(@Param("email") String email, @Param("password") String password);
+    //修改密码
+    int changePwd(@Param("username")String username,@Param("password") String password);
 }

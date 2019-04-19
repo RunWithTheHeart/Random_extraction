@@ -23,7 +23,7 @@
                 <div id="da-error-code">error <span>404</span></div>
                 <h1 class="da-error-heading">哎哟喂！页面让狗狗叼走了！</h1>
                 <p>大家可以到狗狗没有叼过的地方看看
-                    <a href="login">返回首页</a>
+                    <a href="login" target="_blank">返回首页</a>
                 </p>
             </div>
         </div>

@@ -47,14 +47,16 @@ public class LoginController extends BaseController {
      */
     @RequestMapping("/userLogin")
     public String userLogin(HttpSession httpSession, User user, Model model) {
-
         System.out.println(user);
         //1.管理员  2.普通用户
         if (user.getType() == 1) {
             Admin admin = new Admin();
             admin.setUsername(user.getUsername());
             admin.setPassword(user.getPassword());
-//            admin2 = userServiceImpl.selectAdmin(admin);
+
+            System.out.println("我是管理员");
+            admin2 = userServiceImpl.selectAdmin(admin);
+
             //System.out.println(admin2);
         } else {
             user2 = userServiceImpl.selectUser(user);
@@ -64,14 +66,15 @@ public class LoginController extends BaseController {
         if (user.getType() == 1 && admin2 != null) {
             //管理员登陆成功
             System.out.println("登录成功");
-            httpSession.setAttribute("username", user.username);
+            admin2.setType(user.getType());
+            httpSession.setAttribute("admin", admin2);
             httpSession.removeAttribute("errmsg");
-            return "index";
+            return "../admin/index";
         }
         if (user.getType() == 2 && user2 != null) {
             //普通用户登陆成功
             System.out.println("登录成功");
-            httpSession.setAttribute("username", user.username);
+            httpSession.setAttribute("user", user);
             httpSession.removeAttribute("errmsg");
             return "index";
         } else {
@@ -86,14 +89,13 @@ public class LoginController extends BaseController {
 
     /**
      * 用户登出
-     *
      * @param httpSession
      * @return
      */
     @RequestMapping("/userLogout")
     public String userLogout(HttpSession httpSession) {
         httpSession.invalidate();
-        return "/login.jsp";
+        return "/login";
     }
 
     /**
@@ -132,10 +134,10 @@ public class LoginController extends BaseController {
      * @param response
      * @return
      */
-
     @RequestMapping("/a")
     public String downloadLett(HttpServletRequest request, HttpServletResponse response) {
         return "resetPassword";
     }
+
 
 }

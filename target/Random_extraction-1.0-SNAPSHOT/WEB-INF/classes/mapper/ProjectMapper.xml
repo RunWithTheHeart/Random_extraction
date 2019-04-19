@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyy.dao.ProjectMapper">
+
+    <resultMap id="BaseResultMap" type="com.wyy.bean.Project">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="contents" jdbcType="VARCHAR" property="contents" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="issuing_time" jdbcType="TIMESTAMP" property="issuing_time" />
+        <result column="extraction_time" jdbcType="TIMESTAMP" property="extraction_time" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+      id,title, contents,username,issuing_time,extraction_time
+    </sql>
+
+    <!--查询所有项目-->
+    <select id="selectAllProject" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select *
+        from  project
+        limit #{start},#{length}
+    </select>
+
+    <!--插入一条数据<include refid="Base_Column_List" />-->
+    <insert id="insertProject" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into project
+        (title, contents,username,issuing_time,extraction_time)
+        VALUES
+        (#{title},#{contents},#{username},#{issuing_time},#{extraction_time});
+    </insert>
+
+    <!--查询数据条数-->
+    <select id="count" resultType="java.lang.Integer">
+        select count(*)
+        from  project
+    </select>
+
+<!--*************************保存数据**********************-->
+    <resultMap id="BaseResult" type="com.wyy.bean.Save_project">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="contents" jdbcType="VARCHAR" property="contents" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="extraction_time" jdbcType="TIMESTAMP" property="extraction_time" />
+    </resultMap>
+    <!--插入一条数据-->
+    <insert id="saveProject" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into save_project
+        (title, contents,username,extraction_time)
+        VALUES
+        (#{title},#{contents},#{username},#{extraction_time});
+    </insert>
+
+    <!--根据username更新一条数据-->
+    <update id="updateSaveProject" parameterType="com.wyy.bean.Project">
+        update save_project
+        set title=#{title},contents=#{contents},extraction_time=#{extraction_time}
+        where username = #{username};
+    </update>
+
+    <!--根据username查询一条数据-->
+    <select id="selectSaveProject" resultMap="BaseResult" parameterType="com.wyy.bean.Project">
+        select *
+        from save_project
+        where  username = #{username};
+    </select>
+
+    <!--根据username删除一条数据-->
+    <select id="deleteSaveProject"  parameterType="java.lang.String" resultType="java.lang.Integer">
+        delete
+        from save_project
+        where  username = #{username};
+    </select>
+
+</mapper>

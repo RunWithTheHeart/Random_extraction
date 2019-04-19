@@ -30,6 +30,7 @@
     <mvc:resources mapping="/static/js/**" location="/static/js/"/>
     <mvc:resources mapping="/static/images/**" location="/static/images/"/>
     <mvc:resources mapping="/static/fonts/**" location="/static/fonts/"/>
+    <mvc:resources mapping="/static/**" location="/static/"/>
 
     <!--两个标准配置  -->
     <!-- 将springmvc不能处理的请求交给tomcat 。比如静态资源-->
@@ -37,19 +38,19 @@
     <!-- 能支持springmvc更高级的一些功能，JSR303校验，快捷的ajax...映射动态请求。@RequestBody 和 @ResponseBody 注解的支持-->
     <mvc:annotation-driven/>
 
-    <!-- 配置拦截器 -->
+    <!-- 配置拦截器  -->
     <mvc:interceptors>
         <!-- 多个拦截器，按声明顺序执行 -->
 
         <!-- 针对所有资源 -->
         <!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
         <!--<bean class="com.host.app.web.interceptor.AllInterceptor"/>-->
-
         <!-- 针对指定资源 -->
         <mvc:interceptor>
             <!--mapping和exclude-mapping的定义规则： 可以使用一个星号*表示任意字符，使用两个星号**表示任意层次的任意字符-->
             <mvc:mapping path="/**"/> <!-- 拦截所有的url包括子url路径 -->
             <!--设置不拦截的路径-->
+            <mvc:exclude-mapping path="/**"/>
             <mvc:exclude-mapping path="/userLogin"/>
             <mvc:exclude-mapping path="/userLogout"/>
             <mvc:exclude-mapping path="/login"/>
@@ -65,6 +66,8 @@
             <bean class="com.wyy.interceptor.LoginInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
+
+
 
     <!--SpringMVC 异常处理-->
     <!--对所有异常进行统一处理，可以使用 SimpleMappingExceptionResolver，它将异常类名映射为视图名，即发生异常时使用对应的视图报告异常。-->
