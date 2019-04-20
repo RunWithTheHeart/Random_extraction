@@ -19,4 +19,12 @@ public interface ProjectService {
     //查询保存的项目
     Save_project selectSaveProject(String username);
 
+    //删除一个项目
+    int deleteProject(int id);
+
+    //批量删除
+    int deleteProjects(int ids[]);
+
+    //username条件查询
+    PageInfo<Project> searchProject(int start, int length, int draw, String username);
 }

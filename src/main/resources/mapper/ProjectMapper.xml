@@ -23,6 +23,14 @@
         limit #{start},#{length}
     </select>
 
+    <!--username查询所有项目-->
+    <select id="searchProject" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select *
+        from  project
+        where username like concat('%',#{username},'%')
+        limit #{start},#{length}
+    </select>
+
     <!--插入一条数据<include refid="Base_Column_List" />-->
     <insert id="insertProject" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         insert into project
@@ -36,6 +44,34 @@
         select count(*)
         from  project
     </select>
+    <!--username查询数据条数-->
+    <select id="counts" resultType="java.lang.Integer">
+        select count(*)
+        from  project
+        where username like concat('%',#{username},'%')
+    </select>
+
+    <!--根据id删除一条数据-->
+    <delete id="deleteProject"  parameterType="java.lang.Integer" >
+        delete
+        from project
+        where  id = #{id};
+    </delete>
+
+    <!--根据id删除多条数据-->
+    <delete id="deleteProjects" parameterType="int" >
+        delete
+        from project
+        where  id in
+        <foreach item="item" collection="array" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+
+
+
+
 
 <!--*************************保存数据**********************-->
     <resultMap id="BaseResult" type="com.wyy.bean.Save_project">
@@ -68,10 +104,11 @@
     </select>
 
     <!--根据username删除一条数据-->
-    <select id="deleteSaveProject"  parameterType="java.lang.String" resultType="java.lang.Integer">
+    <delete id="deleteSaveProject"  parameterType="java.lang.String" >
         delete
         from save_project
         where  username = #{username};
-    </select>
+    </delete>
+
 
 </mapper>

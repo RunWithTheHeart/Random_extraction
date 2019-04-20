@@ -27,44 +27,29 @@
 <div class="page-container">
 	<div class="text-c">
 		<span class="select-box inline">
-		<input type="text" name="" id="" placeholder=" 发布项目标题" style="width:250px" class="input-text">
-		<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+			<input type="text" name="username" id="username" placeholder="发布人" style="width:250px" class="input-text">
+			<button name="search" id="btn_search" class="btn btn-success" type="button"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+		</span>
 	</div>
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
-		<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a></span>
-		<span class="r">共有数据：<strong>54</strong> 条</span> 
+		<a href="javascript:;" id="deletes" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a></span>
+		<!--<span class="r">共有数据：<strong>54</strong> 条</span> -->
 	</div>
 	<div class="mt-20">
-		<table class="table table-border table-bordered table-bg table-hover  table-responsive">
+		<table id="table_show"  class="table table-border table-bordered table-bg table-hover  table-responsive">
 			<thead>
 				<tr class="text-c">
 					<th width="25"><input type="checkbox" name="" value=""></th>
-					<th width="80">项目ID</th>
-					<th width="120">项目标题</th>
-					<th width="100">发布人</th>   
-					<th width="90">发布时间</th>            
-					<th width="100">操作</th>
+					<th width="60">项目ID</th>
+					<th width="200">项目标题</th>
+					<th width="40">发布人</th>
+					<th width="100">发布时间</th>
+					<th width="100">抽取时间</th>
+					<th width="70">操作</th>
+
 				</tr>
 			</thead>
-			<tbody>
-				<tr class="text-c">
-					<td><input type="checkbox" value="" name=""></td>
-					<td>10001</td>
-					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">项目标题</u></td>
-					<td>admin</td>
-					<td>2014-6-11 11:11:42</td>
-					<td class="f-14 td-manage"><a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr>
-				<tr class="text-c">
-					<td><input type="checkbox" value="" name=""></td>
-					<td>10002</td>
-					<td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang.html','10001')" title="查看">项目标题</u></td>
-					<td>admin</td>
-					<td>2014-6-11 11:11:42</td>
-					<td class="f-14 td-manage"><a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-				</tr>
-				
-			</tbody>
+			<tbody></tbody>
 		</table>
 	</div>
 </div>
@@ -79,26 +64,85 @@
 <script type="text/javascript" src="../static/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../static/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
-$('.table-sort').dataTable({
-	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
-	"bStateSave": true,//状态保存
-	"pading":false,
-	"aoColumnDefs": [
-	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-	  {"orderable":false,"aTargets":[5]}// 不参与排序的列
-	]
+	var table;
+$(function(){
+     table = $('#table_show').DataTable({
+        "paging":true,
+        "info" : true,
+        "serverSide": true,
+        "searching": true,
+        "ordering": false,
+        "colReorder": true,
+		"deferRender":true,
+        "aaSorting": [[ 1, "asc" ]],//默认第几个排序
+        "ajax":{
+            "url":"/show_project",
+            "type":"post"
+        },
+        columns: [
+            {
+                data:function(row,type,val,meta){
+                    return '<input id="' + row.id + '"  name="checkitem" value="'+row.id+'" type="checkbox" style="position: relative;left: 17px" />';
+                }
+            },
+
+            { data: 'id' },
+            { data: 'title' },
+			{ data: 'username' },
+            { data: 'str_issuing_time' },
+            { data: 'str_extraction_time' },
+
+            {
+                data:function(row,type,val,meta){
+                    return '<a title="删除" href="javascript:;" onclick="project_del(this,' + row.id + ')" style="position: relative;right: -40px" ><i class="Hui-iconfont">&#xe6e2;</i></a>'+
+                    		'<a title="查看详情" href="javascript:;" onclick="project_contents(this,' + row.id + ')" style="position: relative;right: -52px"><i class="Hui-iconfont">&#xe695;</i></a>';//<i class="fa fa-trash-o"><i>删除class="btn btn-sm btn-danger"
+                }
+            },
+        ],
+
+    });
+
+});
+/*批量删除数据*/
+$('#deletes').click(function() {
+    if ($("input[name='checkitem']:checked")[0] == null) {
+        layer.msg('请至少选择一件商品!', {icon: 5, time: 1000});
+        return;
+    }
+    layer.confirm('您确定要彻底删除吗?', {btn: ['确定', '取消'], title: "提示"}, function () {
+        var ids = new Array();
+        $("input[name='checkitem']:checked").each(function () {
+            ids.push($(this).val());
+        });
+
+
+        $.ajax({
+            url: "/delete_projects",
+            data: "ids=" + ids,
+            type: "post",
+            dataType: "json",
+            success: function (data) {
+                layer.msg(data.message, {icon: 1,time:1000});
+                table.ajax.reload();
+            }
+        });
+    })
 });
 
-/*资讯-删除*/
-function article_del(obj,id){
+
+
+/*项目-删除*/
+function project_del(obj,id){
 	layer.confirm('确认要删除吗？',function(index){
 		$.ajax({
 			type: 'POST',
-			url: '',
+			url: '/delete_project',
+			data:{"id":id},
 			dataType: 'json',
 			success: function(data){
 				$(obj).parents("tr").remove();
-				layer.msg('已删除!',{icon:1,time:1000});
+				layer.msg(data.message,{icon:1,time:1000});
+
 			},
 			error:function(data) {
 				console.log(data.msg);
@@ -106,6 +150,67 @@ function article_del(obj,id){
 		});		
 	});
 }
+/*查看项目内容*/
+function project_contents(obj,id){
+    layer.confirm('确认要删除吗？',function(index){
+	$.ajax({
+		type: 'POST',
+		url: 'delete_project',
+		dataType: 'json',
+		success: function(data){
+			$(obj).parents("tr").remove();
+			layer.msg('已删除!',{icon:1,time:1000});
+		},
+		error:function(data) {
+			console.log(data.msg);
+		},
+	});
+    });
+}
+
+
+
+//条件查询
+$('#btn_search').click(function() {
+    var username = $("#username").val();
+    $('#table_show').DataTable({
+        "destroy": true,
+        "paging": true,
+        "info": true,
+        "serverSide": true,
+        "searching": true,
+        "ordering": false,
+        "colReorder": true,
+        "deferRender": true,
+        "aaSorting": [[1, "asc"]],//默认第几个排序
+        "ajax": {
+            "url": "/username_search_project",
+            "data": {"username": username},
+            "type": "post"
+        },
+        columns: [
+            {
+                data: function (row, type, val, meta) {
+                    return '<input id="' + row.id + '"  name="checkitem" value="' + row.id + '" type="checkbox" style="position: relative;left: 17px" />';
+                }
+            },
+
+            {data: 'id'},
+            {data: 'title'},
+            {data: 'username'},
+            {data: 'str_issuing_time'},
+            {data: 'str_extraction_time'},
+
+            {
+                data: function (row, type, val, meta) {
+                    return '<a title="删除" href="javascript:;" onclick="project_del(this,' + row.id + ')" style="position: relative;right: -40px" ><i class="Hui-iconfont">&#xe6e2;</i></a>' +
+                        '<a title="查看详情" href="javascript:;" onclick="project_contents(this,' + row.id + ')" style="position: relative;right: -52px"><i class="Hui-iconfont">&#xe695;</i></a>';//<i class="fa fa-trash-o"><i>删除class="btn btn-sm btn-danger"
+                }
+            },
+        ],
+
+    });
+});
 
 </script> 
 </body>

@@ -25,4 +25,12 @@ public interface ProjectMapper {
     int  deleteSaveProject(String username);
     //根据username更新
     int updateSaveProject(Project project);
+    //根据id删除一个项目
+    int deleteProject(int id);
+    //根据id删除多个项目
+    int deleteProjects(int ids[]);
+    //根据username查询数据总条数
+    int counts(String username);
+    //根据username查询所有评标项目  start,length,username
+    List<Project> searchProject(Map<String, Object> params);
 }

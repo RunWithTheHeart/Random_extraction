@@ -39,7 +39,8 @@ public class ProjectServiceImpl implements ProjectService {
         try{
             flag = projectMapper.insertProject(project);
             if(projectMapper.selectSaveProject(username) != null){//有
-                projectMapper.deleteSaveProject(username);
+                int del = projectMapper.deleteSaveProject(username);
+
             }
             transactionManager.commit(status);
 
@@ -57,7 +58,6 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public PageInfo<Project> selectAllProject(int start, int length, int draw) {
         int count = projectMapper.count();
-
         Map<String, Object> params = new HashMap<>();
         params.put("start",start);
         params.put("length",length);
@@ -67,7 +67,7 @@ public class ProjectServiceImpl implements ProjectService {
         pageInfo.setRecordsTotal(count);
         pageInfo.setRecordsFiltered(count);
         pageInfo.setData(projectMapper.selectAllProject(params));
-        return null;
+        return pageInfo;
     }
 
     //保存项目  0:失败 1：成功
@@ -90,5 +90,32 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Save_project selectSaveProject(String username) {
         return projectMapper.selectSaveProject(username);
+    }
+
+    //删除一个项目
+    @Override
+    public int deleteProject(int id) {
+        return projectMapper.deleteProject(id);
+    }
+    //批量删除
+    @Override
+    public int deleteProjects(int ids[]) {
+        return projectMapper.deleteProjects(ids);
+    }
+    //username条件查询
+    @Override
+    public PageInfo<Project> searchProject(int start, int length, int draw, String username) {
+        int count = projectMapper.counts(username);
+        Map<String, Object> params = new HashMap<>();
+        params.put("start",start);
+        params.put("length",length);
+        params.put("username",username);
+
+        PageInfo<Project> pageInfo = new PageInfo<>();
+        pageInfo.setDraw(draw);
+        pageInfo.setRecordsTotal(count);
+        pageInfo.setRecordsFiltered(count);
+        pageInfo.setData(projectMapper.searchProject(params));
+        return pageInfo;
     }
 }

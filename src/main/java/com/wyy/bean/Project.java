@@ -1,6 +1,7 @@
 package com.wyy.bean;
 
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Project {
@@ -10,6 +11,9 @@ public class Project {
     private String username;
     private Date issuing_time;
     private Date extraction_time;
+    private String str_issuing_time;  //转换日期
+    private String str_extraction_time;
+
 
     public Integer getId() {
         return id;
@@ -48,6 +52,8 @@ public class Project {
     }
 
     public void setIssuing_time(Date issuing_time) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        this.str_issuing_time = sdf.format(issuing_time);
         this.issuing_time = issuing_time;
     }
 
@@ -56,7 +62,25 @@ public class Project {
     }
 
     public void setExtraction_time(Date extraction_time) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        this.str_extraction_time = sdf.format(extraction_time);
         this.extraction_time = extraction_time;
+    }
+
+    public String getStr_issuing_time() {
+        return str_issuing_time;
+    }
+
+    public void setStr_issuing_time(String str_issuing_time) {
+        this.str_issuing_time = str_issuing_time;
+    }
+
+    public String getStr_extraction_time() {
+        return str_extraction_time;
+    }
+
+    public void setStr_extraction_time(String str_extraction_time) {
+        this.str_extraction_time = str_extraction_time;
     }
 
     @Override

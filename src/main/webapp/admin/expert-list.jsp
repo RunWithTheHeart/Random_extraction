@@ -50,7 +50,7 @@
 				<th width="40">性别</th>
 				<th width="90">手机</th>
 				<th width="150">邮箱</th>
-				<th width="">地址</th>
+				<th width="100">地址</th>
 				<th width="100">操作</th>
 			</tr>
 		</thead>
