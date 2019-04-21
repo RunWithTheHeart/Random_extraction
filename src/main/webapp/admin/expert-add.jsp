@@ -137,7 +137,7 @@ $(function(){
 		increaseArea: '20%'
 	});
 	
-	$("#form-expert-add").validate({
+	$("#form-Expert-add").validate({
 		rules:{
 			expert_number:{
 				required:true,

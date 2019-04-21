@@ -24,4 +24,7 @@ public interface UserMapper {
 
     //查询数据总条数
     int count();
+
+    //添加用户
+    int insertUser(User user);
 }

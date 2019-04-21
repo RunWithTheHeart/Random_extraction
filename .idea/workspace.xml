@@ -7,32 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f13a69c-a4d1-4774-a385-339ad4d4f69c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyy/bean/Expert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyy/bean/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyy/bean/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wyy/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyy/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyy/dao/ProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyy/dao/ProjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyy/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyy/service/ProjectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyy/service/impl/ProjectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyy/service/impl/ProjectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyy/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyy/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/alternative-expert-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/alternative-expert-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/expert-add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/expert-add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/expert-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/expert-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/message-add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/message-add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/message-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/message-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/bean/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/bean/Project.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/controller/ProjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/controller/ProjectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/dao/ProjectMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/dao/ProjectMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/service/ProjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/service/ProjectService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/service/impl/ProjectServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/com/wyy/service/impl/ProjectServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/mapper/ProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/classes/mapper/ProjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/log/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/WEB-INF/log/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/alternative-expert-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/alternative-expert-list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/expert-add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/expert-add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/expert-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/expert-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/message-add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/message-add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/message-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/message-list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wyy/bean/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wyy/bean/Project.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wyy/controller/ProjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wyy/controller/ProjectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wyy/dao/ProjectMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wyy/dao/ProjectMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wyy/service/ProjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wyy/service/ProjectService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wyy/service/impl/ProjectServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wyy/service/impl/ProjectServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ProjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Random_extraction-1.0-SNAPSHOT/admin/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wyy/controller/ProjectController.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,9 +38,10 @@
     <session id="-978662948">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.20" value="1" />
@@ -62,7 +51,7 @@
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.48" value="1" />
-          <entry key="project.open.time.49" value="2" />
+          <entry key="project.open.time.49" value="3" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.56" value="1" />
@@ -76,7 +65,7 @@
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.93" value="1" />
-          <entry key="project.opened" value="29" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -89,13 +78,13 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="138" />
-          <entry key="JAVA" value="6298" />
+          <entry key="JAVA" value="7422" />
           <entry key="JSP" value="3657" />
           <entry key="JavaScript" value="11" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="115" />
           <entry key="SQL" value="13" />
-          <entry key="XML" value="1424" />
+          <entry key="XML" value="1520" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -111,18 +100,50 @@
           <entry key="CLASS" value="19" />
           <entry key="CSS" value="2" />
           <entry key="HTML" value="19" />
-          <entry key="JAVA" value="112" />
+          <entry key="IDEA_MODULE" value="2" />
+          <entry key="JAVA" value="127" />
           <entry key="JSP" value="43" />
           <entry key="JavaScript" value="10" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="4" />
-          <entry key="XML" value="39" />
+          <entry key="XML" value="40" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/dao/ExpertMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExpertMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/bean/Expert.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,16 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/views/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wyy/bean/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/resetPassword.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/error/404.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/admin-list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/welcome.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/welcome.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/user-add.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/set-number.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/admin/project-list.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/message-add.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/message-list.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/judge-list.html" />
@@ -179,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wyy/service/IUserService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyy/bean/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wyy/dao/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyy/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyy/controller/ShowController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/user-list.jsp" />
@@ -192,12 +202,23 @@
         <option value="$PROJECT_DIR$/src/main/webapp/admin/message-add.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyy/bean/Project.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/expert-list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wyy/service/ProjectService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyy/dao/ProjectMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyy/service/impl/ProjectServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wyy/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/message-list.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ProjectMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/bean/Alternative_expert.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/bean/judge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/bean/set_number.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/bean/expert.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/bean/Expert.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/controller/ExpertController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/service/ExpertService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/service/ProjectService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/dao/ExpertMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyy/service/impl/ExpertServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ExpertMapper.xml" />
       </list>
     </option>
   </component>
@@ -237,9 +258,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="112" />
-    <option name="y" value="32" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1155" />
     <option name="height" value="727" />
   </component>
@@ -249,8 +270,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,7 +320,27 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="wyy" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Random_extraction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Random_extraction" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="wyy" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Random_extraction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Random_extraction" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="wyy" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Random_extraction" type="b2602c69:ProjectViewProjectNode" />
@@ -343,20 +382,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555751814792" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555837035904" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -370,9 +411,11 @@
       <recent name="E:\paper\source\Random_extraction\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.wyy.bean" />
-      <recent name="com.wyy.controller" />
+      <recent name="com.wyy.service.impl" />
       <recent name="com.wyy.dao" />
+      <recent name="com.wyy.service" />
+      <recent name="com.wyy.controller" />
+      <recent name="com.wyy.bean" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\paper\source\Random_extraction\src\main\webapp\views" />
@@ -903,18 +946,14 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
-      <item itemvalue="Application.MailSenderUtil" />
-      <item itemvalue="Tomcat Server.resetPassword.jsp" />
-      <item itemvalue="Tomcat Server.resetPassword.jsp (1)" />
       <item itemvalue="Tomcat Server.index.html" />
       <item itemvalue="Tomcat Server.index.jsp" />
+      <item itemvalue="Tomcat Server.resetPassword.jsp" />
+      <item itemvalue="Tomcat Server.resetPassword.jsp (1)" />
+      <item itemvalue="Application.MailSenderUtil" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Tomcat Server.index.jsp" />
-        <item itemvalue="Tomcat Server.index.html" />
-        <item itemvalue="Tomcat Server.resetPassword.jsp (1)" />
-        <item itemvalue="Tomcat Server.resetPassword.jsp" />
         <item itemvalue="Application.MailSenderUtil" />
       </list>
     </recent_temporary>
@@ -957,7 +996,13 @@
       <workItem from="1555499612691" duration="29419000" />
       <workItem from="1555658944484" duration="15724000" />
       <workItem from="1555675081214" duration="10042000" />
-      <workItem from="1555724544722" duration="19511000" />
+      <workItem from="1555724544722" duration="20988000" />
+      <workItem from="1555830296946" duration="294000" />
+      <workItem from="1555830629298" duration="729000" />
+      <workItem from="1555831402187" duration="146000" />
+      <workItem from="1555831577507" duration="163000" />
+      <workItem from="1555831771013" duration="71000" />
+      <workItem from="1555831872362" duration="5104000" />
     </task>
     <servers />
   </component>
@@ -967,7 +1012,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246029000" />
+    <option name="totallyTimeSpent" value="254013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -980,8 +1025,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24432677" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2579425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -991,15 +1037,15 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.37692308" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.14" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3876923" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923076" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.3276923" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49924356" visible="true" weight="0.3923077" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.3923077" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.4353846" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49924356" weight="0.3276923" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924356" weight="0.09274874" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.37692308" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.050769232" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.5184615" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32615384" />
@@ -1091,76 +1137,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/admin-list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/alternative-expert-add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/alternative-expert-list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/resetPassword.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="217" column="5" lean-forward="true" selection-start-line="195" selection-start-column="3" selection-end-line="217" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/dao/AdminMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcherServlet-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/laypage/1.2/laypage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AdminMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/ueditor/1.4.3/ueditor.all.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1379">
-          <caret line="24713" column="16" selection-start-line="24713" selection-start-column="16" selection-end-line="24713" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/change-password.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1242,13 +1218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
           <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1343,13 +1312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/message-add.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -1361,29 +1323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="5" column="49" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1398,9 +1337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="52" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1415,9 +1351,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1136">
           <caret line="34" column="25" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1425,9 +1358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="61" column="62" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1435,41 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1533#1534#0" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-            <element signature="e#1717#1718#0" expanded="true" />
-            <element signature="e#1787#1788#0" expanded="true" />
-            <element signature="e#1849#1850#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/service/ProjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/service/impl/ProjectServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="102" column="47" lean-forward="true" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3099#3100#0" expanded="true" />
-            <element signature="e#3155#3156#0" expanded="true" />
-            <element signature="e#3220#3221#0" expanded="true" />
-            <element signature="e#3276#3277#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1477,22 +1372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="174" column="40" selection-start-line="174" selection-start-column="40" selection-end-line="174" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/controller/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
         </state>
       </provider>
     </entry>
@@ -1507,6 +1386,118 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/bean/Alternative_expert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/bean/Judge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/bean/Set_number.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Random_extraction.iml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="31" column="33" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/service/impl/ProjectServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="102" column="47" lean-forward="true" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/service/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/service/ExpertService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/service/impl/ExpertServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#2138#2139#0" expanded="true" />
+            <element signature="e#2194#2195#0" expanded="true" />
+            <element signature="e#3061#3062#0" expanded="true" />
+            <element signature="e#3115#3116#0" expanded="true" />
+            <element signature="e#3183#3184#0" expanded="true" />
+            <element signature="e#3239#3240#0" expanded="true" />
+            <element signature="e#3416#3417#0" expanded="true" />
+            <element signature="e#3443#3444#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/controller/ExpertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="158" column="5" lean-forward="true" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/dao/ExpertMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyy/bean/Expert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ExpertMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>

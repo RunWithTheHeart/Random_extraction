@@ -50,8 +50,8 @@ public class ProjectController extends BaseController {
         Date date = new Date();
         String dateStr = sdf.format(date);
         project.setIssuing_time(sdf.parse(dateStr));//发布时间issuing_time
-        int flag = projectService.insertProject(project) ;
-        System.out.println("flag:::::"+flag);
+        //int flag = projectService.insertProject(project) ;
+        //System.out.println("flag:::::"+flag);
         String message = projectService.insertProject(project) == 0?"发布失败":"发布成功";
 
         Map map = new HashMap<>();

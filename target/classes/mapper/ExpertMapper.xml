@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyy.dao.ExpertMapper">
+
+    <resultMap id="BaseResultMap" type="com.wyy.bean.Expert">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="expert_number" jdbcType="VARCHAR" property="expert_number" />
+        <result column="name"          jdbcType="VARCHAR" property="name" />
+        <result column="gender"        jdbcType="VARCHAR" property="gender" />
+        <result column="birthday"      jdbcType="TIMESTAMP" property="birthday" />
+        <result column="job_title"     jdbcType="VARCHAR" property="job_title" />
+        <result column="level"         jdbcType="VARCHAR" property="level" />
+        <result column="profession"    jdbcType="VARCHAR" property="profession" />
+        <result column="identity"      jdbcType="VARCHAR" property="identity" />
+        <result column="mobile"        jdbcType="VARCHAR" property="mobile" />
+        <result column="email"         jdbcType="VARCHAR" property="email" />
+        <result column="address"       jdbcType="VARCHAR" property="address" />
+        <result column="created"       jdbcType="TIMESTAMP" property="created" />
+
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+      id,expert_number, `name`,gender,birthday,job_title,`level`,profession,`identity`,mobile,email,address,created
+    </sql>
+        ------------go
+    <!--查询所有项目-->
+    <select id="selectAllProject" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select *
+        from  project
+        limit #{start},#{length}
+    </select>
+
+    <!--username查询所有项目-->
+    <select id="searchProject" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select *
+        from  project
+        where username like concat('%',#{username},'%')
+        limit #{start},#{length}
+    </select>
+
+    <!--插入一条数据<include refid="Base_Column_List" />-->
+    <insert id="insertProject" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into project
+        (title, contents,username,issuing_time,extraction_time)
+        VALUES
+        (#{title},#{contents},#{username},#{issuing_time},#{extraction_time});
+    </insert>
+
+    <!--查询数据条数-->
+    <select id="count" resultType="java.lang.Integer">
+        select count(*)
+        from  project
+    </select>
+    <!--username查询数据条数-->
+    <select id="counts" resultType="java.lang.Integer">
+        select count(*)
+        from  project
+        where username like concat('%',#{username},'%')
+    </select>
+
+    <!--根据id删除一条数据-->
+    <delete id="deleteProject"  parameterType="java.lang.Integer" >
+        delete
+        from project
+        where  id = #{id};
+    </delete>
+
+    <!--根据id删除多条数据-->
+    <delete id="deleteProjects" parameterType="int" >
+        delete
+        from project
+        where  id in
+        <foreach item="item" collection="array" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+
+
+
+
+
+<!--*************************保存数据**********************-->
+    <resultMap id="BaseResult" type="com.wyy.bean.Save_project">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="contents" jdbcType="VARCHAR" property="contents" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="extraction_time" jdbcType="TIMESTAMP" property="extraction_time" />
+    </resultMap>
+    <!--插入一条数据-->
+    <insert id="saveProject" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into save_project
+        (title, contents,username,extraction_time)
+        VALUES
+        (#{title},#{contents},#{username},#{extraction_time});
+    </insert>
+
+    <!--根据username更新一条数据-->
+    <update id="updateSaveProject" parameterType="com.wyy.bean.Project">
+        update save_project
+        set title=#{title},contents=#{contents},extraction_time=#{extraction_time}
+        where username = #{username};
+    </update>
+
+    <!--根据username查询一条数据-->
+    <select id="selectSaveProject" resultMap="BaseResult" parameterType="com.wyy.bean.Project">
+        select *
+        from save_project
+        where  username = #{username};
+    </select>
+
+    <!--根据username删除一条数据-->
+    <delete id="deleteSaveProject"  parameterType="java.lang.String" >
+        delete
+        from save_project
+        where  username = #{username};
+    </delete>
+
+
+</mapper>

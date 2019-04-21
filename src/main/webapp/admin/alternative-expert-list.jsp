@@ -32,7 +32,7 @@
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> 
 		<span class="l">
 			<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量取消抽取资格</a>
-			<a href="javascript:void(0);" onclick="alternative_expert_add('添加备选专家','alternative-expert-add.jsp','400','480')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加备选专家</a>
+			<a href="javascript:void(0);" onclick="alternative_expert_add('添加备选专家','alternative-Expert-add.jsp','400','480')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加备选专家</a>
 		</span>
 		<span class="r">共有数据：<strong>88</strong> 条</span>
 	</div>

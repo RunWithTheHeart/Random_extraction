@@ -37,7 +37,7 @@
 	</div>
 	<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
 		<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> 
-		<a href="javascript:;" onclick="expert_add('添加专家','expert-add.jsp','','510')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加专家</a></span>
+		<a href="javascript:;" onclick="expert_add('添加专家','Expert-add.jsp','','510')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加专家</a></span>
 		<span class="r">共有数据：<strong>88</strong> 条</span> 
 	</div>
 	<div class="mt-20">
